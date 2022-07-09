@@ -9,10 +9,8 @@ export const useFetchGifs = (category, limit) => {
 	});
 
 	useEffect( () => {
-
 		getGifs(category, limit)
 			.then( imgs => ( 
-
 				setState({
 					data: imgs,
 					loading: false
@@ -20,5 +18,5 @@ export const useFetchGifs = (category, limit) => {
 			));
 	},[category, limit]);
 
-	return state
+	return state;
 };
