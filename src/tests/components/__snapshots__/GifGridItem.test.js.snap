@@ -12,7 +12,9 @@ Object {
           alt="guitar shredding GIF"
           src="https://media0.giphy.com/media/sBikoeGRyOrK0/giphy.gif?cid=6c30809bl2bahk3vu4bhua3ulsjhiov792cbfylsl6eaukrx&rid=giphy.gif&ct=g"
         />
-        <p>
+        <p
+          data-testid="p1"
+        >
           guitar shredding GIF
         </p>
       </div>
@@ -26,7 +28,9 @@ Object {
         alt="guitar shredding GIF"
         src="https://media0.giphy.com/media/sBikoeGRyOrK0/giphy.gif?cid=6c30809bl2bahk3vu4bhua3ulsjhiov792cbfylsl6eaukrx&rid=giphy.gif&ct=g"
       />
-      <p>
+      <p
+        data-testid="p1"
+      >
         guitar shredding GIF
       </p>
     </div>
