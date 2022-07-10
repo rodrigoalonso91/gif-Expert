@@ -10,7 +10,7 @@ export const AddCategory = ({setCategory}) => {
     const handleInputValue = (e) => {
         setInputValue(e.target.value);
     }
-	
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
