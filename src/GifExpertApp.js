@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { AddCategory } from './AddCategory';
 import { GifGrid } from './GifGrid'         
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories = []}) => {
 
-    const [category, setCategory] = useState(['Guitar']);
+    const [category, setCategory] = useState( defaultCategories );
 
     return (
         <>
