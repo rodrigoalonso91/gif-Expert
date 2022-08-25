@@ -12,12 +12,7 @@ export const GifGrid = ({category, limit = 10}) => {
 			{loading && <p className="animate__animated animate__flash">Loading...</p>}
 			<ol className='container'>
 				{
-					images.map( img  => (
-						<GifGridItem
-							key={img.id}
-							{...img}
-						/>
-					))
+					images.map( img  => (<GifGridItem key={img.id} {...img} /> ))
 				}
 			</ol>
 		</>

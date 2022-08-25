@@ -10,7 +10,11 @@ describe('getGifs tests', () => {
 		const gifs = await getGifs( category, limit );
 		
 		expect( gifs.length ).toBe( limit );
-
+		expect( gifs[0] ).toEqual( {
+			id: expect.any(String),
+			title: expect.any(String),
+			url: expect.any(String)
+		} );
 	});
 
 	test('should return an empty array when category is undefined', async () => { 

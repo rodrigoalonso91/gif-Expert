@@ -14,7 +14,7 @@ describe('Tests in component <AddCategory />', () => {
 	test('should value be equals to input change', () => { 
 
 		render(<AddCategory setCategory={setCategory} />)
-		const input = screen.getByPlaceholderText( 'Buscar' )
+		const input = screen.getByRole( 'textbox' )
 		
 		fireEvent.change( input, { target: { value: 'Hola' } } )
 	
@@ -24,7 +24,7 @@ describe('Tests in component <AddCategory />', () => {
 	test('should keep information without changes', () => { 
 
 		render(<AddCategory setCategory={setCategory} />)
-		const input = screen.getByPlaceholderText( 'Buscar' )
+		const input = screen.getByRole( 'textbox' )
 
 		fireEvent.submit(input);
 
@@ -43,6 +43,5 @@ describe('Tests in component <AddCategory />', () => {
 		expect( setCategory ).toBeCalledTimes(1);
 		expect( setCategory ).toBeCalledWith( expect.any(Function) );
 		expect( input.getAttribute( 'value' ) ).toBe('');
-
 	});
 });
