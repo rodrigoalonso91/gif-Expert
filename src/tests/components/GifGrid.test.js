@@ -1,5 +1,5 @@
 import React from 'react'
-import {render, screen} from '@testing-library/react'
+import {getByText, render, screen} from '@testing-library/react'
 import {GifGrid} from '../../components/GifGrid'
 import { useFetchGifs } from '../../hooks/useFetchGifs';
 jest.mock('../../hooks/useFetchGifs');
@@ -29,6 +29,18 @@ describe('Testing on <GifGrid />', () => {
 
 		expect(render(<GifGrid category={category} limit={limit} />)).toMatchSnapshot()
 	});
+
+	test('should to show loading message', () => { 
+
+		useFetchGifs.mockReturnValue({
+			data: [],
+			loading: true
+		});
+
+		render(<GifGrid category={category} limit={limit} />)
+
+		expect(screen.getByText('Loading...')).toBeTruthy();
+	})
 
 	test('should to hide loading message', () => { 
 

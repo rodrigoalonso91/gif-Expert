@@ -24,8 +24,7 @@ describe('getGifs tests', () => {
 		const gifs = await getGifs( category );
 
 		expect( gifs.length ).toBe( 0 );
-
-	})
+	});
 
 	test('should return default limit when limit is undefined', async () => { 
 

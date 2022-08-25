@@ -35,7 +35,7 @@ describe('Tests in component <AddCategory />', () => {
 
 		render(<AddCategory setCategory={setCategory} />)
 
-		const input = screen.getByPlaceholderText( 'Buscar' )
+		const input = screen.getByRole( 'textbox' )
 		fireEvent.change( input, { target: { value: 'Hola' } } )
 		fireEvent.submit(input);
 
